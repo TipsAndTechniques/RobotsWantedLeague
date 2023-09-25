@@ -79,8 +79,8 @@ public class Pays
         return countries.ContainsKey(tryCountry);
     }
 
-	public static bool newMethod(string tryCountry)
+	public static Dictionary<string, string> GetCountries()
     {
-        return countries.ContainsKey(tryCountry);
+        return countries;
     }
 }
