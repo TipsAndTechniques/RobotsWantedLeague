@@ -37,8 +37,8 @@
       <label for="country">Pays</label>
       <!-- On veut ajouter une drop down list ici -->
       <select name="country" id="country"></select>
-      @foreach (var kvp in new Pays().GetCountries()) {
-      <option value="@kvp.Key">@kvp.Key</option>
+      @foreach (var kvp in Pays.GetCountries()) {
+        <option value="@kvp.Key">@kvp.Key</option>
       }
     </div>
 

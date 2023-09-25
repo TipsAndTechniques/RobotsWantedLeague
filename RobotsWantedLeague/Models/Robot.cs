@@ -16,12 +16,12 @@ public class Robot{
 
     public string Country { get; set;}
 
-    // public Robot(int Id, string Name, int Weight, int Height, string Country){
-    //     this.Id = Id;
-    //     this.Name = Name;
-    //     this.Weight = Weight;
-    //     this.Height = Height;
-    //     this.Country = Country;
-    // }
+    public Robot(int Id, string Name, int Weight, int Height, string Country){
+        this.Id = Id;
+        this.Name = Name;
+        this.Weight = Weight;
+        this.Height = Height;
+        this.Country = Country;
+    }
     
 }
