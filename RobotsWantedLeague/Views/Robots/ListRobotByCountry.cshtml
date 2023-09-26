@@ -1,3 +1,11 @@
  <!-- Liste déroulante de pays, continent -->
- <p>Hello world!</p>
+ <div class="form-group">
+    <label for="country">Pays</label>
+    <!-- On veut ajouter une drop down list ici -->
+    <select name="country" id="country">
+      @foreach (var kvp in Pays.GetCountries()) {
+      <option value="@kvp.Key">@kvp.Key, @kvp.Value</option>
+      }
+    </select>
+  </div>
  
