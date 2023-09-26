@@ -38,7 +38,7 @@ public class RobotsController : Controller
     }
 
     public IActionResult Robot(int id){
-        Robot robot = robotsService.GetRobotById(id);
+        Robot? robot = robotsService.GetRobotById(id);
         return View(robot);
     }
 
@@ -59,4 +59,16 @@ public class RobotsController : Controller
         Response.Headers.Add(htmxRedirectHeaderName, redirectURL);
         return Ok();
     }
+
+    // ListRobotByCountry
+    // public IActionResult Robot(int id){
+    //     Robot? robot = robotsService.GetRobotById(id);
+    //     return View(robot);
+    // }
+    
+    public IActionResult ListRobotByCountry(){
+        
+        return View();
+    }
+    
 }
