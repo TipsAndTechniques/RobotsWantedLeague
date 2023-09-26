@@ -7,13 +7,14 @@
 <ul class="list-group">
   @foreach (Robot robot in Model){
     <li class="list-group-item">
-        <a class="btn btn-success mt-2" href="robots/detruireRobot?id=@robot.Id"> Destruction</a>
-        <a class="btn btn-danger mt-2" href="robots/modifierRobot?id=@robot.Id"> Relocalisation</a>
+        <!-- Tout a est un http get -->
+        <a class="btn btn-success mt-2" hx-delete="robots/detruireRobot?id=@robot.Id" hx-ext="json-enc" hx-trigger="click"> Destruction</a>
+        <a class="btn btn-danger mt-2" hx-post="robots/modifierRobot?id=@robot.Id"> Relocalisation</a>
+
         <span>&nbsp;&nbsp;&nbsp;</span>
         <a href="robots/robot?id=@robot.Id">@robot.Name</a>
     </li>
   }
 </ul>
-
 
 <a class="btn btn-primary mt-2" href="/robots/createRobot"> Ajouter un robot</a>

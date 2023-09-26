@@ -53,6 +53,9 @@ public class RobotsController : Controller
     public IActionResult DetruireRobot(int id)
     {
         robotsService.DeleteRobotById(id);
+        string htmxRedirectHeaderName = "HX-Redirect";
+        string redirectURL = "/robots";
+        Response.Headers.Add(htmxRedirectHeaderName, redirectURL);
         return Ok();
     }
 
