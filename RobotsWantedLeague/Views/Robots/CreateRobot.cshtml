@@ -1,3 +1,4 @@
+<Robot>
   <form hx-post="/robots/createRobot" hx-ext="json-enc" hx-trigger="submit">
     <div class="form-group">
       <label for="name">Le nom du robot</label>
@@ -8,8 +9,7 @@
         name="name"
         placeholder="Le Géant Ferré"
       />
-    </div>
-    <div class="form-group">
+
       <label for="weight">Poids (kg)</label>
       <input
         type="number"
@@ -19,9 +19,7 @@
         min="0"
         placeholder="87"
       />
-    </div>
 
-    <div class="form-group">
       <label for="height">Taille (m)</label>
       <input
         type="number"
@@ -31,26 +29,16 @@
         min="0"
         placeholder="2"
       />
-    </div>
 
-    <div class="form-group">
       <label for="country">Pays</label>
       <!-- On veut ajouter une drop down list ici -->
-      <select name="country" id="country"></select>
-      @foreach (var kvp in Pays.GetCountries()) {
-        <option value="@kvp.Key">@kvp.Key</option>
-      }
+      <select name="country" id="country">
+        @foreach (var kvp in Pays.GetCountries()) {
+          <option value="@kvp.Key">@kvp.Key, @kvp.Value</option>
+        }
+      </select>
     </div>
 
     <button type="submit" class="btn btn-primary mt-3">Submit</button>
   </form>
 </Robot>
-
-<!-- <div class="form-group">
-    <label for="country">Pays</label>
-    <input type="text" 
-           class="form-control" 
-           id="country" 
-           name="country"
-           placeholder="Suriname">
-  </div> -->
