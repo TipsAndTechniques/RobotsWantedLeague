@@ -7,6 +7,9 @@
 <ul class="list-group">
   @foreach (Robot robot in Model){
     <li class="list-group-item">
+        <a class="btn btn-success mt-2" href="robots/detruireRobot?id=@robot.Id"> Destruction</a>
+        <a class="btn btn-danger mt-2" href="robots/modifierRobot?id=@robot.Id"> Relocalisation</a>
+        <span>&nbsp;&nbsp;&nbsp;</span>
         <a href="robots/robot?id=@robot.Id">@robot.Name</a>
     </li>
   }
