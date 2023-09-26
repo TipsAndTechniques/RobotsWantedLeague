@@ -1,46 +1,44 @@
-<!-- <Robot> -->
-  <form hx-post="/robots/createRobot" hx-ext="json-enc" hx-trigger="submit">
-    <div class="form-group">
-      <label for="name">Le nom du robot</label>
-      <input
-        type="text"
-        class="form-control"
-        id="name"
-        name="name"
-        placeholder="Le Géant Ferré"
-      />
+<form hx-post="/robots/createRobot" hx-ext="json-enc" hx-trigger="submit">
+  <div class="form-group">
+    <label for="name">Le nom du robot</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      placeholder="Le Géant Ferré"
+    />
 
-      <label for="weight">Poids (kg)</label>
-      <input
-        type="number"
-        class="form-control"
-        id="weight"
-        name="weight"
-        min="0"
-        placeholder="87"
-      />
+    <label for="weight">Poids (kg)</label>
+    <input
+      type="number"
+      class="form-control"
+      id="weight"
+      name="weight"
+      min="0"
+      placeholder="87"
+    />
 
-      <label for="height">Taille (m)</label>
-      <input
-        type="number"
-        class="form-control"
-        id="height"
-        name="height"
-        min="0"
-        placeholder="2"
-      />
+    <label for="height">Taille (m)</label>
+    <input
+      type="number"
+      class="form-control"
+      id="height"
+      name="height"
+      min="0"
+      placeholder="2"
+    />
 
-      <label for="country">Pays</label>
-      <!-- On veut ajouter une drop down list ici -->
-      <select name="country" id="country">
-        @foreach (var kvp in Pays.GetCountries()) {
-          <option value="@kvp.Key">@kvp.Key, @kvp.Value</option>
-        }
-      </select>
-    </div>
+    <label for="country">Pays</label>
+    <!-- On veut ajouter une drop down list ici -->
+    <select name="country" id="country">
+      @foreach (var kvp in Pays.GetCountries()) {
+      <option value="@kvp.Key">@kvp.Key, @kvp.Value</option>
+      }
+    </select>
+  </div>
 
-    <button type="submit" class="btn btn-primary mt-3">Submit</button>
-    <br>
-    <a href="/robots/ListRobotByCountry">ListRobotByCountry</a>
-  </form>
-<!-- </Robot> -->
+  <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  <br />
+  <a href="/robots/ListRobotByCountry">ListRobotByCountry</a>
+</form>
