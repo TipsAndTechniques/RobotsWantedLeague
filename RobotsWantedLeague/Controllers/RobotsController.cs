@@ -64,7 +64,11 @@ public class RobotsController : Controller
     {
         return View();
     }
-
+    
+    [HttpGet]
+    public IActionResult RelocaliserRobot(){
+        return View();
+    }
 
 
     [HttpPost]
