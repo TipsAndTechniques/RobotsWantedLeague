@@ -133,4 +133,6 @@ $RECYCLE.BIN/
 _NCrunch*
 
 .vscode
-doc
+doc.idea
+.idea/.idea.RobotsWantedLeague/.idea/.gitignore
+.idea
