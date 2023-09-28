@@ -1,14 +1,14 @@
 @model Robot
 
-@{
+{
     string imageURL = "https://robohash.org/aligator" + Model.Id.ToString() + "?set=set2";
-}
+} 
 
 <div class="container">
     <div class="d-flex justify-content-center">
         <div class="card" style="width: 10rem;">
             <img class="card-img-top" 
-                 src="@imageURL">
+                 src="imageURL">
         </div>
     </div>
 </div>
@@ -32,7 +32,7 @@
 
 </table>
 
-<form hx-post="/robots/RelocaliserRobot2" hx-ext="json-enc" hx-trigger="submit"></form>
+<form hx-post="/robots/RelocaliserRobot2" hx-ext="json-enc" hx-trigger="submit">
     <label for="country">Pays</label>
     <!-- On veut ajouter une drop down list ici -->
     <select name="country" id="country">

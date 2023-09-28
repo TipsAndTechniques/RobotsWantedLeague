@@ -47,8 +47,8 @@ public class RobotsController : Controller
     public IActionResult RelocaliserRobot(int id)
     {
         Robot? robot = robotsService.GetRobotById(id);
-
-        return View();
+        if (robot != null) {Console.WriteLine(robot.Name);}
+        return View(robot);
     }
     public IActionResult DetruireRobot(int id)
     {
@@ -65,12 +65,6 @@ public class RobotsController : Controller
         return View();
     }
     
-    [HttpGet]
-    public IActionResult RelocaliserRobot(){
-        return View();
-    }
-
-
     [HttpPost]
     public IActionResult CreateRobot([FromBody] RobotRequest robot)
     {

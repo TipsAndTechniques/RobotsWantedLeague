@@ -8,8 +8,8 @@
   @foreach (Robot robot in Model){
     <li class="list-group-item">
         <!-- Tout a est un http get -->
-        <a class="btn btn-success mt-2" hx-delete="robots/detruireRobot?id=@robot.Id" hx-ext="json-enc" hx-trigger="click"> Destruction</a>
-        <a class="btn btn-danger mt-2" hx-post="robots/relocaliserRobot?id=@robot.Id"> Relocalisation</a>
+        <a class="btn btn-success mt-2" hx-delete="robots/DetruireRobot?id=@robot.Id" hx-ext="json-enc" hx-trigger="click"> Destruction</a>
+        <a class="btn btn-danger mt-2" href="robots/RelocaliserRobot?id=@robot.Id"> Relocalisation</a>
 
         <span>&nbsp;&nbsp;&nbsp;</span>
         <a href="robots/robot?id=@robot.Id">@robot.Name</a>
